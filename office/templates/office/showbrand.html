@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مشخصات مکان</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .header {
+    background-color: #6c63ff;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    width: 100%;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .location {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+
+  .location h2 {
+    color: #6c63ff;
+    margin-top: 0;
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+
+  .location img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .location p {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #777;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .btn:hover {
+    background-color: #463eca;
+  }
+  
+  .footer {
+    background-color: #463eca;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .footer h2 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .footer p {
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>دفتر تلفن</h1>
+</div>
+
+<div class="location">
+  <h2>{{onvan}}</h2>
+  <img src="{% static 'office/image/' %}{{img}}" alt="عکس مکان" />
+  <p>{{addres}}</p>
+  <p>{{tell}}</p>
+  <button class="btn">اطلاعات بیشتر</button>
+</div>
+
+<div class="footer">
+  <h2>درباره ما</h2>
+  <p>در دفتر تلفن ما به تأمین و ارائه اطلاعات مختلف از مکان‌ها می‌پردازیم.</p>
+</div>
+</body>
+</html>
